@@ -62,7 +62,7 @@ class Tree:
         """Return the height of the tree."""
         return max(self.depth(p) for p in self.positions() if self.is_leaf(p))
     
-    def _height2(self):          # time is linear in size of subtree
+    def _height2(self, p):          # time is linear in size of subtree
         """Return the height of the subree rooted at Position p."""
         if self.is_leaf(p):
             return 0
